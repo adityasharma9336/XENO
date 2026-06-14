@@ -7,6 +7,7 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
   const response = await fetch(url, {
     headers: {
       'Content-Type': 'application/json',
+      'Bypass-Tunnel-Reminder': 'true',
       ...options?.headers
     },
     ...options
